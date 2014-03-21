@@ -32,6 +32,29 @@ public class warp {
         
 	}
 	
+	public static boolean isPublic(String nazwa){
+		
+		if(Config.getConfig("warpy").getBoolean("warpy." + nazwa + ".public"){
+			return true;
+		}else{
+			
+			return false;
+		}
+		
+		
+	}
+	
+	
+	public static void setPublic(String nazwa){
+		
+		if(Config.getConfig("warpy").set("warpy." + nazwa + ".public", "true"){
+			return true;
+		}else{
+			return false;
+		}
+		
+	}
+	
 	public static boolean isSet(String nazwa){
 		if(Config.getConfig("warpy").contains("warpy." + nazwa)){
 			
